@@ -1,14 +1,25 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
-import { NativeScriptRouterModule } from "@nativescript/angular";
-
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/angular";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent }
+    {
+        path: "",
+        redirectTo: "/(weatherTab:weather/default//safetyTab:safety/default)",
+        pathMatch: "full"
+    },
+    {
+        path: "weather",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("src/app/weather/weather.module").then((m) => m.WeatherModule),
+        outlet: "weatherTab"
+    },
+    {
+        path: "safety",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("src/app/safety/safety.module").then((m) => m.SafetyModule),
+        outlet: "safetyTab"
+    },
 ];
 
 @NgModule({

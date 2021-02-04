@@ -1,3 +1,21 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
-</GridLayout>
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem class="navigation__item">
+            <Label text="Weather"></Label>
+            <Image src="font://&#xf0c2;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label text="Safety"></Label>
+            <Image src="font://&#xf1cd;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <page-router-outlet name="weatherTab"></page-router-outlet>
+    </TabContentItem>
+
+    <TabContentItem>
+        <page-router-outlet name="safetyTab"></page-router-outlet>
+    </TabContentItem>
+
+</BottomNavigation>

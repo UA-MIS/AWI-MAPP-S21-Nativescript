@@ -3,8 +3,8 @@ import { NativeScriptModule } from "@nativescript/angular";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { NativeScriptHttpClientModule } from "@nativescript/angular/http-client";
+
 
 @NgModule({
     bootstrap: [
@@ -12,12 +12,11 @@ import { ItemDetailComponent } from "./item/item-detail.component";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptHttpClientModule
     ],
     declarations: [
-        AppComponent,
-        ItemsComponent,
-        ItemDetailComponent
+        AppComponent
     ],
     providers: [],
     schemas: [
