@@ -1,6 +1,6 @@
 {
   "name": "@nativescript/template-hello-world-ng",
-  "main": "main.js",
+  "main": "main.ts",
   "version": "7.0.9",
   "author": "NativeScript Team <oss@nativescript.org>",
   "description": "NativeScript Application",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "~11.0.0",
+    "@nativescript/android": "7.0.1",
     "@nativescript/types": "~7.0.0",
     "@nativescript/webpack": "~4.0.0",
     "@ngtools/webpack": "~11.0.0",
