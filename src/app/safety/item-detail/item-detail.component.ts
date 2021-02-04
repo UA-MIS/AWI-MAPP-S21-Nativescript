@@ -1,9 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { RouterExtensions } from "nativescript-angular/router";
-import {openUrl} from "tns-core-modules/utils/utils";
+import { RouterExtensions } from "@nativescript/angular/router";
+//import {openUrl} from "tns-core-modules/utils/utils";
+import { Utils } from "@nativescript/core";
+
 import { DataService, DataItem } from "../../shared/data.service";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Dialogs } from "@nativescript/core";
 
 
 @Component({
@@ -28,14 +30,14 @@ export class ItemDetailComponent implements OnInit {
         this._routerExtensions.back();
     }
     onTap(args) {
-        dialogs.confirm({
+        Dialogs.confirm({
             title: "This link is trying to leave the application",
             message: "Are you sure you want to leave?",
             okButtonText: "Yes",
             cancelButtonText: "Cancel"
         }).then(r => {
             if(r == true){
-                openUrl(this.item.link);
+                Utils.openUrl(this.item.link);
             }
         });
     }  
