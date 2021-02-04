@@ -11,13 +11,14 @@ const routes: Routes = [
     {
         path: "weather",
         component: NSEmptyOutletComponent,
-        loadChildren: () => import("src/app/weather/weather.module").then((m) => m.WeatherModule),
+        //loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
+        loadChildren: () => import("src/app/weather/weather.module").then(m => m.WeatherModule),
         outlet: "weatherTab"
     },
     {
         path: "safety",
         component: NSEmptyOutletComponent,
-        loadChildren: () => import("src/app/safety/safety.module").then((m) => m.SafetyModule),
+        loadChildren: () => import("src/app/safety/safety.module").then(m => m.SafetyModule),
         outlet: "safetyTab"
     },
 ];
