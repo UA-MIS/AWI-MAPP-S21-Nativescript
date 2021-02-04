@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherAPIService } from '../../shared/weather-api.service';
-import { fontStyleProperty } from 'tns-core-modules/ui/page/page';
-import { GeolocationService } from '~/app/shared/geolocation.service';
+//import { fontStyleProperty } from 'tns-core-modules/ui/page/page';
+import { GeolocationService } from '../../shared/geolocation.service';
 
 @Component({
   selector: 'ns-current-weather',

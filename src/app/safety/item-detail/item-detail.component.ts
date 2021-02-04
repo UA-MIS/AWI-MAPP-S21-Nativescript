@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { RouterExtensions } from "@nativescript/angular/router";
+import { RouterExtensions } from "@nativescript/angular";
 //import {openUrl} from "tns-core-modules/utils/utils";
 import { Utils } from "@nativescript/core";
 
