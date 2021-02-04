@@ -1,6 +1,6 @@
 {
   "name": "@nativescript/template-hello-world-ng",
-  "main": "main.ts",
+  "main": "main.js",
   "version": "7.0.9",
   "author": "NativeScript Team <oss@nativescript.org>",
   "description": "NativeScript Application",
@@ -31,6 +31,7 @@
     "@nativescript/angular": "~11.0.0",
     "@nativescript/core": "~7.1.0",
     "@nativescript/theme": "~3.0.0",
+    "nativescript-geolocation": "^5.1.0",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.6.0",
     "zone.js": "~0.11.1"
