@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import { googleKey } from '...../api-keys.js';
 
 @Component({
     selector: 'Location',
@@ -9,5 +10,7 @@ import { Component } from '@angular/core';
     constructor() { }
   
     ngOnInit() { }
+
+    
   }
   
