@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class TideService{
 	constructor(private http: HttpClient){}
 
-	getRawTideData(stationNum: number): Observable<any>{
+	getRawTideData(stationNum: number, product: predictions??): Observable<any>{
 		'Content-Type: 'application/json'
 	});
 	return this.http.get(
