@@ -17,6 +17,12 @@ const routes: Routes = [
         outlet: "weatherTab"
     },
     {
+        path: "tides",
+        component: NSEmptyOutletComponent,
+        // loadChildren: () => import("../app/tides/tides.module").then(m => m.TidesModule),
+        outlet: "tidesTab"
+    },
+    {
         path: "safety",
         component: NSEmptyOutletComponent,
         loadChildren: () => import("../app/safety/safety.module").then(m => m.SafetyModule),
