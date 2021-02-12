@@ -19,7 +19,7 @@ const routes: Routes = [
     {
         path: "tides",
         component: NSEmptyOutletComponent,
-        // loadChildren: () => import("../app/tides/tides.module").then(m => m.TidesModule),
+        loadChildren: () => import("../app/tides/tides.module").then(m => m.TidesModule),
         outlet: "tidesTab"
     },
     {
