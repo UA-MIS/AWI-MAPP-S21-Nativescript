@@ -6,7 +6,7 @@ import { NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/
 const routes: Routes = [
     {
         path: "",
-        redirectTo: "/(weatherTab:weather/default//safetyTab:safety/default)",
+        redirectTo: "/(weatherTab:weather/default//tidesTab:tides/default//safetyTab:safety/default)",
         pathMatch: "full"
     },
     {

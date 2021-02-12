@@ -7,7 +7,5 @@ import { Component, OnInit } from "@angular/core";
 export class TidesComponent implements OnInit {
     constructor() { }
 
-    ngOnInit(): void {
-        console.log("Tides component initialized");
-    }
+    ngOnInit() { }
 }
