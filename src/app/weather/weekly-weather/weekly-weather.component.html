@@ -8,7 +8,7 @@
         <Label class="locationLabel" [text]="weeklyWeatherData?.name"></Label>
     </ng-template>
 
-    <Label class="temperatureLabel" [text]="convertKelvinToFahrenheit(weeklyWeatherData?.main.temp) + '°'" style="float: left"></Label>
+    <Label class="temperatureLabel" [text]="convertKelvinToFahrenheit(weeklyWeatherData?.main.tp)em + '°'" style="float: left"></Label>
 
     <StackLayout orientation="horizontal">
         <Label class="windLabel" text="Wind speed: "></Label>
