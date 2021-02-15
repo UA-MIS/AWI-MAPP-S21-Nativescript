@@ -1,12 +1,37 @@
 <ActionBar>
-    <GridLayout columns="*,8*,*">
-        <Label col="1" row="0" text="Weather"></Label>
-        <Image col="2" row="0" src="font://&#xf013;" class="fas"></Image>
-    </GridLayout>
+  <GridLayout columns="*,8*,*">
+    <Label col="1" row="0" text="Weather"></Label>
+    <Image col="2" row="0" src="font://&#xf013;" class="fas"></Image>
+  </GridLayout>
 </ActionBar>
 
 <StackLayout>
-    <ns-current-weather></ns-current-weather>
+  <ns-current-weather></ns-current-weather>
+  <!-- <Button text="Button" [nsRouterLink]="['thelocation']" pageTransition="slide" clearHistory="true"></Button>  -->
 
-    
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+      #map {
+        height: 100%;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="./weather.component.ts"></script>
+  </head>
+
+  <body>
+    <div id="map" style="width: 100%; height: 100%"></div>
+    <script async
+      src="http://maps.googleapis.com/maps/api/js?key=GOOGLEAPIKEY&callback=initMap">
+
+      </script>
+  </body>
 </StackLayout>

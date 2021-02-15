@@ -29,11 +29,16 @@
 
 			<meta-data android:name="SET_THEME_ON_LAUNCH" android:resource="@style/AppTheme" />
 
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="@string/nativescript_google_maps_api_key" />
+
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+		
 	</application>
 </manifest>

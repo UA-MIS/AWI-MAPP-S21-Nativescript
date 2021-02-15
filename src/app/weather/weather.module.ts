@@ -5,7 +5,7 @@ import { NativeScriptCommonModule } from '@nativescript/angular';
 import { WeatherComponent } from './weather.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { WeatherStatusComponent } from './current-weather/weather-status/weather-status.component';
-
+// import { LocationComponent } from '../shared/location/location.component';
 
 @NgModule({
   declarations: [WeatherComponent, CurrentWeatherComponent, WeatherStatusComponent],

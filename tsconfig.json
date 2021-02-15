@@ -2,6 +2,8 @@
   "compilerOptions": {
       "module": "esnext",
       "target": "es2017",
+      "types": ["google.maps"],
+      "typeRoots": ["./node_modules/@types", "./node_modules/@googlemaps/types"],
       "moduleResolution": "node",
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
