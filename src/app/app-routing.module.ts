@@ -6,7 +6,7 @@ import { NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/
 const routes: Routes = [
     {
         path: "",
-        redirectTo: "/(weatherTab:weather/default//safetyTab:safety/default)",
+        redirectTo: "/(weatherTab:weather/default//tidesTab:tides/default//safetyTab:safety/default)",
         pathMatch: "full"
     },
     {
@@ -15,6 +15,12 @@ const routes: Routes = [
         //loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
         loadChildren: () => import("../app/weather/weather.module").then(m => m.WeatherModule),
         outlet: "weatherTab"
+    },
+    {
+        path: "tides",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("../app/tides/tides.module").then(m => m.TidesModule),
+        outlet: "tidesTab"
     },
     {
         path: "safety",

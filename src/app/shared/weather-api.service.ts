@@ -20,15 +20,7 @@ export class WeatherAPIService {
     );
   }
 
-  getForecastData(lat: number, lon: number): Observable<any> {
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    return this.http.get(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${this.key}`,
-      { headers: headers }
-    );
-  }
+
 
   getWeeklyWeatherData(lat: number, lon: number): Observable<any> {
     let headers = new HttpHeaders({
@@ -38,5 +30,5 @@ export class WeatherAPIService {
         `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${this.key}`,
         { headers: headers }
     );
-  }
+      }
 }

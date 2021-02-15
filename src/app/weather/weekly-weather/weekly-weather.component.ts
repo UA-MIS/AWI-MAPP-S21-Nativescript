@@ -1,15 +1,16 @@
+
 import { Component, OnInit } from '@angular/core';
 import { WeatherAPIService } from '../../shared/weather-api.service';
 //import { fontStyleProperty } from 'tns-core-modules/ui/page/page';
 import { GeolocationService } from '../../shared/geolocation.service';
 
 @Component({
-  selector: 'ns-current-weather',
+  selector: 'ns-weekly-weather',
   templateUrl: './weekly-weather.component.html',
   styleUrls: ['./weekly-weather.component.css']
 })
 export class WeeklyWeatherComponent implements OnInit {
-  public currentWeatherData;
+  public weeklyWeatherData;
   private currentLocation;
 
   constructor(private weatherService: WeatherAPIService, private geolocationService: GeolocationService) { }
@@ -27,7 +28,7 @@ export class WeeklyWeatherComponent implements OnInit {
       this.currentLocation.latitude,
       this.currentLocation.longitude
     ).subscribe(
-      (data) => this.currentWeatherData = data,
+      (data) => this.weeklyWeatherData = data,
       (err) => console.log(err)
     );
   }
@@ -36,3 +37,4 @@ export class WeeklyWeatherComponent implements OnInit {
     return Math.floor((temp - 273.15) * 9/5 + 32);
   }
 }
+
