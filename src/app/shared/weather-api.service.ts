@@ -39,4 +39,8 @@ export class WeatherAPIService {
         { headers: headers }
     );
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a2b6bfa81b95265727929d3367dab4be535c7ef7
 }
