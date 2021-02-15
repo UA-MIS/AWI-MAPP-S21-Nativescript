@@ -10,6 +10,7 @@ export class WeatherAPIService {
 
   constructor(private http: HttpClient) { }
 
+
   getCurrentWeatherData(lat: number, lon: number): Observable<any> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
