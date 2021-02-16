@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherAPIService } from '../../shared/weather-api.service';
 //import { fontStyleProperty } from 'tns-core-modules/ui/page/page';
 import { GeolocationService } from '../../shared/geolocation.service';
+import { setCurrentWeather, getCurrentWeather } from '../../shared/cache.service';
 
 @Component({
   selector: 'ns-current-weather',
@@ -24,12 +25,18 @@ export class CurrentWeatherComponent implements OnInit {
 
   getCurrentWeatherData() {
     this.weatherService.getCurrentWeatherData(
-      this.currentLocation.latitude, 
+      this.currentLocation.latitude,
       this.currentLocation.longitude
     ).subscribe(
       (data) => this.currentWeatherData = data,
       (err) => console.log(err)
     );
+    // console.log("***DEBUGGING***");
+    // console.log("Data type: " + typeof(this.currentWeatherData))
+    // console.log("Directly called data: " + this.currentWeatherData);
+    // setCurrentWeather(this.currentWeatherData);
+    // console.log("Application settings data: " + getCurrentWeather());
+    // console.log("***END DEBUGGING***");
   }
 
   convertKelvinToFahrenheit(temp: number): number {
