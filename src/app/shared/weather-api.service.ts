@@ -6,27 +6,28 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherAPIService {
-  private key = "a820e83b00a7f25dc38c83c6d42fdeee";
+  private key = "539a46bd4ad297dc8deef20214c22d81";
 
   constructor(private http: HttpClient) { }
+
 
   getCurrentWeatherData(lat: number, lon: number): Observable<any> {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
     return this.http.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.key}`, 
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.key}`,
       { headers: headers }
     );
   }
 
-  getForecastData(lat: number, lon: number): Observable<any> {
+  getWeeklyWeatherData(lat: number, lon: number): Observable<any> {
     let headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-    return this.http.get(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${this.key}`, 
-      { headers: headers }
+        'Content-Type': 'application/json'
+      });
+      return this.http.get(
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${this.key}`,
+        { headers: headers }
     );
-  }
+      }
 }
