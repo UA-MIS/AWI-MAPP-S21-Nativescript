@@ -5,11 +5,11 @@ import { NativeScriptRouterModule } from "@nativescript/angular";
 import { WeatherComponent } from './weather.component';
 
 const routes: Routes = [
-  { path: "default", component: WeatherComponent }
+    { path: "default", component: WeatherComponent }
 ];
 
 @NgModule({
-  imports: [NativeScriptRouterModule.forChild(routes)],
-  exports: [NativeScriptRouterModule]
+    imports: [NativeScriptRouterModule.forChild(routes)],
+    exports: [NativeScriptRouterModule]
 })
 export class WeatherRoutingModule { }

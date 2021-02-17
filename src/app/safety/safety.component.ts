@@ -15,6 +15,3 @@ export class SafetyComponent implements OnInit {
         this.items = this._itemService.getItems();
     }
 }
-
-
- 
