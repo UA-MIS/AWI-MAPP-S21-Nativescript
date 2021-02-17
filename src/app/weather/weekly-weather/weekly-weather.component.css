@@ -1,41 +1,20 @@
 
 .roundedBox {
     border-radius: 25px;
-    margin-top: 30px;
-}
-
-.locationLabel {
-    font-size: 20px;
-    font-weight: bold;
-    color: #72a7fc;
-    margin-left: 20px;
     margin-top: 10px;
 }
 
-.temperatureLabel {
-    font-size: 16px;
-    color: green;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
 
-.windLabel {
-    font-size: 12px;
-    margin-left: 20px;
-}
+.btn {
+    background-color:transparent;
+    padding:none;
+    font-size: 9px;
+    width: 8.4%;
+    border-radius: 15px;
+    height: 5%;
+  }
 
-.windData {
-    font-size: 12px;
-    margin-left: 20px;
-    font-weight: bold;
-    color: blue;
-}
+  .calbtn{
+    background-color:white;
 
-.weatherStatusContainer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.weatherStatus {
-    margin-top: 20px;
-}
+  }

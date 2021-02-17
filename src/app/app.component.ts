@@ -5,7 +5,7 @@ import { GeolocationService } from "./shared/geolocation.service";
     selector: "ns-app",
     templateUrl: "./app.component.html"
 })
-export class AppComponent implements OnInit { 
+export class AppComponent implements OnInit {
     constructor(private geolocationService: GeolocationService) {
         geolocationService.watchLocation();
     }
@@ -13,4 +13,9 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         //Init component properties here
     }
+
+    onTapDay(){
+
+    }
+
  }

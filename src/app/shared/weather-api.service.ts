@@ -21,8 +21,6 @@ export class WeatherAPIService {
     );
   }
 
-
-
   getWeeklyWeatherData(lat: number, lon: number): Observable<any> {
     let headers = new HttpHeaders({
         'Content-Type': 'application/json'

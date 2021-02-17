@@ -1,25 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<FlexboxLayout class="roundedBox" height="30%" backgroundColor="lightgray" flexDirection="column" alignItems="flex-start">
-    <StackLayout *ngIf="weeklyWeatherData?.name == ''; then gulfTemplate else landTemplate"></StackLayout>
-    <ng-template #gulfTemplate>
-        <Label class="locationLabel" text="Gulf of Mexico"></Label>
-    </ng-template>
-    <ng-template #landTemplate>
-        <Label class="locationLabel" [text]="weeklyWeatherData?.name"></Label>
-    </ng-template>
+<FlexboxLayout class="roundedBox" height="50%" backgroundColor="lightgray" flexDirection="column" alignItems="flex-start">
 
-    <Label class="temperatureLabel" [text]="convertKelvinToFahrenheit(weeklyWeatherData?.main.tp)em + '°'" style="float: left"></Label>
 
-    <StackLayout orientation="horizontal">
-        <Label class="windLabel" text="Wind speed: "></Label>
-        <Label class="windData" [text]="weeklyWeatherData?.wind.speed + ' mph'"></Label>
-    </StackLayout>
-    <StackLayout orientation="horizontal">
-        <Label class="windLabel" text="Wind direction: "></Label>
-        <Label class="windData" [text]="weeklyWeatherData?.wind.deg + '°'"></Label>
+    <StackLayout orientation="vertical">
+
+        <button text="TODAY" class="btn"></button>
+        <button icon="res://calender-icon" style="font-size: 20px" class="calbtn"></button>
+        <button class="fas fa-calendar-week"></button>
+        <button class="btn"><i class="fa fa-home"></i></button>
+        <button class="btn"><i class="fas fa-calendar-week"></i></button>
+        <button class="btn"><i class="fas fa-calendar-week"></i></button>
+        <button class="btn"><i class="fas fa-calendar-week"></i></button>
+
     </StackLayout>
 
-    <StackLayout orientation="vertical" width="100%" class="weatherStatusContainer" *ngFor="let weather of weeklyWeatherData?.weather">
-        <ns-weather-status class="weatherStatus" [weatherStatusData]="weather"></ns-weather-status>
+    <StackLayout orientation="vertical">
+
     </StackLayout>
+
+
 </FlexboxLayout>

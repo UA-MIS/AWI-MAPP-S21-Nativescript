@@ -1,0 +1,24 @@
+<FlexboxLayout class="roundedBox" height="30%" backgroundColor="lightgray" flexDirection="column" alignItems="flex-start">
+    <StackLayout *ngIf="weeklyWeatherData?.name == ''; then gulfTemplate else landTemplate"></StackLayout>
+    <ng-template #gulfTemplate>
+        <Label class="locationLabel" text="Gulf of Mexico"></Label>
+    </ng-template>
+    <ng-template #landTemplate>
+        <Label class="locationLabel" [text]="weeklyWeatherData?.name"></Label>
+    </ng-template>
+
+    <Label class="temperatureLabel" [text]="convertKelvinToFahrenheit(weeklyWeatherData?.main.temp) + '°'" style="float: left"></Label>
+
+    <StackLayout orientation="horizontal">
+        <Label class="windLabel" text="Wind speed: "></Label>
+        <Label class="windData" [text]="weeklyWeatherData?.wind.speed + ' mph'"></Label>
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+        <Label class="windLabel" text="Wind direction: "></Label>
+        <Label class="windData" [text]="weeklyWeatherData?.wind.deg + '°'"></Label>
+    </StackLayout>
+
+    <StackLayout orientation="vertical" width="100%" class="weatherStatusContainer" *ngFor="let weather of weeklyWeatherData?.weather">
+        <ns-weather-status class="weatherStatus" [weatherStatusData]="weather"></ns-weather-status>
+    </StackLayout>
+</FlexboxLayout>
