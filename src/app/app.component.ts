@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { GeolocationService } from "./shared/geolocation.service";
 
+
 @Component({
     selector: "ns-app",
     templateUrl: "./app.component.html"
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         //Init component properties here
+
     }
 
     /*
