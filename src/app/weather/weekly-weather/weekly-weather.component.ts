@@ -1,4 +1,4 @@
-
+/*
 import { Component, OnInit } from '@angular/core';
 import { WeatherAPIService } from '../../shared/weather-api.service';
 //import { fontStyleProperty } from 'tns-core-modules/ui/page/page';
@@ -38,3 +38,4 @@ export class WeeklyWeatherComponent implements OnInit {
   }
 }
 
+*/

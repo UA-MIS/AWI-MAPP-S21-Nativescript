@@ -1,3 +1,4 @@
+
 <FlexboxLayout class="roundedBox" height="30%" backgroundColor="lightgray" flexDirection="column" alignItems="flex-start">
     <StackLayout *ngIf="weeklyWeatherData?.name == ''; then gulfTemplate else landTemplate"></StackLayout>
     <ng-template #gulfTemplate>
