@@ -2,19 +2,19 @@
 .roundedBox {
     border-radius: 25px;
     margin-top: 10px;
+
 }
 
 
 .btn {
-    background-color:transparent;
+    margin-top: 25px;
+    background-color:white;
     padding:none;
     font-size: 9px;
-    width: 8.4%;
-    border-radius: 15px;
-    height: 5%;
+    width: 20%;
+    border-radius: 5px;
+    height: 10%;
   }
 
-  .calbtn{
-    background-color:white;
 
-  }
+
