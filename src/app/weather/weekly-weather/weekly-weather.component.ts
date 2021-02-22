@@ -46,12 +46,10 @@ export class WeeklyWeatherComponent implements OnInit {
     return dayofweek;
  }
 
-
  displayIcon(icon: String): String{
 
     var weatherIcon = icon;
 
     return weatherIcon;
  }
-
  }
