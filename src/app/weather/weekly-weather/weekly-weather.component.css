@@ -6,15 +6,51 @@
 }
 
 
-.btn {
-    margin-top: 25px;
-    background-color:white;
-    padding:none;
-    font-size: 9px;
-    width: 20%;
-    border-radius: 5px;
-    height: 10%;
+.grid {
+    margin-top: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-weight: bold;
   }
+
+  .one{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+
+  }
+  .two{
+    grid-column: 1;
+    grid-row: 3 ;
+    text-align: left;
+  }
+  .three{
+    grid-column: 1;
+    grid-row: 4;
+    text-align: left;
+  }
+  .four{
+    grid-column: 1 ;
+    grid-row: 5;
+    text-align: left;
+  }
+  .five{
+    grid-column: 1;
+    grid-row: 6;
+    text-align: left;
+  }
+  .six{
+    grid-column: 1 ;
+    grid-row: 7 ;
+    text-align: left;
+  }
+  .seven{
+    grid-column: 1;
+    grid-row: 8;
+    text-align: left;
+  }
+
 
 
 

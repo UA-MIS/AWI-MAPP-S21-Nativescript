@@ -3,7 +3,6 @@ import { BehaviorSubject } from 'rxjs';
 import * as geolocation from "nativescript-geolocation";
 import { Accuracy } from "@nativescript/core/ui/enums";
 
-
 @Injectable({
   providedIn: 'root'
 })

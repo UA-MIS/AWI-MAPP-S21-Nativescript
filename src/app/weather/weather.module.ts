@@ -12,7 +12,8 @@ import { WeatherStatusComponent } from './current-weather/weather-status/weather
   declarations: [
     WeatherComponent,
     CurrentWeatherComponent,
-    WeatherStatusComponent
+    WeatherStatusComponent,
+    WeeklyWeatherComponent
   ],
   imports: [
     WeatherRoutingModule,

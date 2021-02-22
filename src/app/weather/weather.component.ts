@@ -9,5 +9,5 @@ import { WeatherAPIService } from '../shared/weather-api.service';
 export class WeatherComponent implements OnInit {
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit():void { }
 }

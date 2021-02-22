@@ -26,8 +26,13 @@ export class WeatherAPIService {
         'Content-Type': 'application/json'
       });
       return this.http.get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${this.key}`,
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${this.key}&units=imperial&icon`,
         { headers: headers }
     );
       }
+
+
+
+
+
 }

@@ -14,10 +14,4 @@ export class AppComponent implements OnInit {
         //Init component properties here
     }
 
-    /*
-    onTapDay(){
-
-    }
-    */
-
  }

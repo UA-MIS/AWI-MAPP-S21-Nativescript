@@ -11,5 +11,6 @@ const routes: Routes = [
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
+
 })
 export class WeatherRoutingModule { }

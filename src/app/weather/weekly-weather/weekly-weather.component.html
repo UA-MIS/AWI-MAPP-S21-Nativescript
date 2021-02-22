@@ -1,21 +1,11 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<FlexboxLayout class="roundedBox" height="65%" backgroundColor="lightgray" flexDirection="column" alignItems="flex-start">
 
 
-    <StackLayout orientation="vertical">
-
-        <button text="Today" class="btn"></button>
-        <button text="Monday" class="btn"></button>
-        <button text="Tuesday" class="btn"></button>
-        <button text="Wednesday" class="btn"></button>
-        <button text="Thursday" class="btn"></button>
-        <button text="Friday" class="btn"></button>
-        <button text="Saturday" class="btn"></button>
-
-
-    </StackLayout>
-
-
-
-</FlexboxLayout>
+    <div class= "grid" height="65%" >
+        <Button class="one" [text]="convertDatetime(weeklyWeatherData?.current.dt)  + displayIcon(weeklyWeatherData?.icon)"  ></Button>
+        <Button class="two" [text]="convertDatetime(weeklyWeatherData?.current.dt + 60 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+        <Button class="three" [text]="convertDatetime(weeklyWeatherData?.current.dt + 120 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+        <Button class="four" [text]="convertDatetime(weeklyWeatherData?.current.dt + 180 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+        <Button class="five" [text]="convertDatetime(weeklyWeatherData?.current.dt + 240 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+        <Button class="six" [text]="convertDatetime(weeklyWeatherData?.current.dt + 300 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+        <Button class="seven" [text]="convertDatetime(weeklyWeatherData?.current.dt + 360 * 60 * 24)" style="background: url(https://openweathermap.org/img/w/04d.png)no-repeat right;background-size:100%" ></Button>
+    </div>

@@ -33,8 +33,25 @@ export class WeeklyWeatherComponent implements OnInit {
     );
   }
 
-  convertKelvinToFahrenheit(temp: number): number {
-    return Math.floor((temp - 273.15) * 9/5 + 32);
-  }
-}
 
+ convertDatetime(dt: number): string {
+
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+    var sec = dt;
+    var date = new Date(dt * 1000);
+    var day = date.getDay();
+    var dayofweek = days[ date.getDay() ];
+
+    return dayofweek;
+ }
+
+
+ displayIcon(icon: String): String{
+
+    var weatherIcon = icon;
+
+    return weatherIcon;
+ }
+
+ }
